@@ -127,7 +127,22 @@
           margin-bottom: 8px;
         }
       }
+            .avatar {
+        width: 78px;
+        height: 78px;
+        border-radius: 999px;
+        overflow: hidden;
+        border: 1px solid #1f2937;
+        margin-bottom: 10px;
+        background: #020617;
+      }
 
+      .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
       .name {
         font-size: 1.9rem;
         font-weight: 700;
@@ -306,6 +321,9 @@
       <section class="container">
         <!-- LEFT SIDE -->
         <div class="left">
+          <div class="avatar">
+            <img src="/avatar.jpeg" alt="Cihan Erken" />
+          </div>
           <div class="name">Cihan Erken</div>
           <div class="title">Full-Stack / React Developer</div>
           <div class="location">Bursa, Turkey · 9+ years experience</div>
