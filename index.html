@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
+    <title>Cihan Erken – Full-Stack / React & Web3 Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- SEO META TAGS -->
+    <meta
+      name="description"
+      content="Full-Stack / React & Web3 Developer with 9+ years of experience building real-time apps, DeFi tools and blockchain integrations (EVM, TON, Steem)."
+    />
+    <meta
+      name="keywords"
+      content="Full-Stack Developer, React Developer, React Native, Node.js, Web3, DeFi, EVM, BSC, TON, Steem, TypeScript, Remote, Bursa"
+    />
+
+    <!-- OPEN GRAPH (LINK PREVIEW) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Cihan Erken – Full-Stack / React & Web3 Developer"
+    />
+    <meta
+      property="og:description"
+      content="Full-Stack / React Developer focused on real-time web apps, DeFi and web3 integrations."
+    />
+    <meta property="og:url" content="https://cihancahiterken.com" />
+    <meta
+      property="og:image"
+      content="https://cihancahiterken.com/og-image.png"
+    />
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Cihan Erken – Full-Stack / React & Web3 Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Full-Stack / React Developer focused on real-time apps, DeFi and web3."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cihancahiterken.com/og-image.png"
+    />
+ <link rel="icon" href="/favicon.ico" />
+    <style>
+      :root {
+        --bg: #050816;
+        --bg-elevated: #0f172a;
+        --accent: #38bdf8;
+        --accent-soft: rgba(56, 189, 248, 0.1);
+        --text: #e5e7eb;
+        --text-soft: #9ca3af;
+        --border: #1f2937;
+        --radius: 14px;
+        --shadow: 0 18px 45px rgba(15, 23, 42, 0.75);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: radial-gradient(circle at top, #0b1120 0, #020617 50%);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 16px;
+      }
+
+      .container {
+        max-width: 880px;
+        width: 100%;
+        background: linear-gradient(135deg, #020617 0%, #020617 40%, #020617 60%);
+        border-radius: 20px;
+        border: 1px solid #1e293b;
+        box-shadow: var(--shadow);
+        padding: 28px 26px 30px;
+        display: grid;
+        grid-template-columns: minmax(0, 2.1fr) minmax(0, 2fr);
+        gap: 28px;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          display: block;
+          padding: 22px 18px 24px;
+        }
+        .right {
+          margin-top: 20px;
+        }
+      }
+
+      .left {
+        border-right: 1px solid var(--border);
+        padding-right: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .left {
+          border-right: none;
+          padding-right: 0;
+          border-bottom: 1px solid var(--border);
+          padding-bottom: 18px;
+          margin-bottom: 8px;
+        }
+      }
+
+      .name {
+        font-size: 1.9rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        margin-bottom: 4px;
+      }
+
+      .title {
+        font-size: 0.98rem;
+        color: var(--text-soft);
+        margin-bottom: 14px;
+      }
+
+      .location {
+        font-size: 0.9rem;
+        color: var(--text-soft);
+        margin-bottom: 12px;
+      }
+
+      .badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 14px;
+      }
+
+      .badge {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--accent);
+        background: var(--accent-soft);
+        border-radius: 999px;
+        padding: 4px 10px;
+        border: 1px solid rgba(56, 189, 248, 0.35);
+      }
+
+      .summary {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: var(--text-soft);
+        margin-bottom: 14px;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 10px;
+      }
+
+      .link-pill {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: rgba(15, 23, 42, 0.9);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .link-pill span.icon {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      .link-pill:hover {
+        border-color: var(--accent);
+        background: rgba(15, 23, 42, 1);
+      }
+
+      .keywords {
+        font-size: 0.78rem;
+        color: var(--text-soft);
+      }
+
+      .keywords strong {
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      .section-title {
+        font-size: 0.85rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-soft);
+        margin-bottom: 10px;
+      }
+
+      .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .project-card {
+        background: rgba(15, 23, 42, 0.95);
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        padding: 10px 11px;
+      }
+
+      .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 2px;
+      }
+
+      .project-name {
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .project-tag {
+        font-size: 0.68rem;
+        padding: 3px 7px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.7);
+        color: var(--text-soft);
+      }
+
+      .project-desc {
+        font-size: 0.8rem;
+        color: var(--text-soft);
+        line-height: 1.5;
+        margin-bottom: 5px;
+      }
+
+      .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+
+      .pill {
+        font-size: 0.7rem;
+        border-radius: 999px;
+        padding: 2px 7px;
+        border: 1px solid rgba(51, 65, 85, 0.9);
+        color: #9ca3af;
+      }
+
+      .project-link {
+        font-size: 0.76rem;
+      }
+
+      .project-link a {
+        color: var(--accent);
+      }
+
+      .project-link a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        margin-top: 12px;
+        font-size: 0.7rem;
+        color: #64748b;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="container">
+        <!-- LEFT SIDE -->
+        <div class="left">
+          <div class="name">Cihan Erken</div>
+          <div class="title">Full-Stack / React Developer</div>
+          <div class="location">Bursa, Turkey · 9+ years experience</div>
+
+          <div class="badge-row">
+            <span class="badge">React &amp; Node.js</span>
+            <span class="badge">Web3 / DeFi</span>
+            <span class="badge">Real-time systems</span>
+          </div>
+
+          <p class="summary">
+            Full-Stack / React Developer focused on real-time web apps and web3
+            integrations. Experienced with EVM-based DeFi products, wallet &amp;
+            smart contract interactions (wagmi, RainbowKit, viem) and
+            end-to-end delivery from API design to deployment.
+          </p>
+
+          <div class="links">
+            <a
+              class="link-pill"
+              href="mailto:cihancahiterken@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="icon">✉️</span>
+              <span>Email</span>
+            </a>
+
+            <a
+              class="link-pill"
+              href="https://github.com/cihancahit"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="icon">💻</span>
+              <span>GitHub</span>
+            </a>
+
+            <a
+              class="link-pill"
+              href="https://www.linkedin.com/in/cihan-erken-54a421328"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="icon">🔗</span>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+
+          <p class="keywords">
+            <strong>Stack:</strong> React, React Native, Node.js, TypeScript,
+            MongoDB, SQLite, Redux / Zustand, React Query, web3.js, ethers.js,
+            wagmi, RainbowKit, Docker, Nginx, PM2, DigitalOcean, Vercel.
+          </p>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right">
+          <h2 class="section-title">Selected Projects</h2>
+
+          <div class="project-list">
+            <!-- Cryptid TCG -->
+            <article class="project-card">
+              <div class="project-header">
+                <div class="project-name">Cryptid TCG</div>
+                <div class="project-tag">Web3 Trading Card Game</div>
+              </div>
+              <p class="project-desc">
+                Browser-based trading card game with real-time battles,
+                matchmaking, turn timers and bot logic. Custom battle engine and
+                game state management with web3 integrations for assets and
+                progression.
+              </p>
+              <div class="project-meta">
+                <div class="pill-row">
+                  <span class="pill">React (Vite)</span>
+                  <span class="pill">Zustand</span>
+                  <span class="pill">styled-components</span>
+                  <span class="pill">Node.js · Socket.IO</span>
+                  <span class="pill">MongoDB</span>
+                  <span class="pill">EVM · web3</span>
+                </div>
+                <div class="project-link">
+                  <a href="https://cryptidtcg.com/" target="_blank" rel="noreferrer"
+                    >Game App</a
+                  >
+                  &nbsp;·&nbsp;
+                  <a
+                    href="https://universe.cryptidtcg.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    >Universe Website</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- CryptoHunter (App + website) -->
+            <article class="project-card">
+              <div class="project-header">
+                <div class="project-name">CryptoHunter</div>
+                <div class="project-tag">P2E · M2E (BSC)</div>
+              </div>
+              <p class="project-desc">
+                BSC-based play-to-earn and move-to-earn mobile app built with
+                React Native. Users earn rewards through both in-game actions
+                and physical movement. The app is under active development;
+                public website is live and showcases the concept and ecosystem.
+              </p>
+              <div class="project-meta">
+                <div class="pill-row">
+                  <span class="pill">React Native</span>
+                  <span class="pill">BSC</span>
+                  <span class="pill">P2E / M2E</span>
+                  <span class="pill">web3 integrations</span>
+                </div>
+                <div class="project-link">
+                  <a
+                    href="https://www.cryptohunter.world/"
+                    target="_blank"
+                    rel="noreferrer"
+                    >CryptoHunter Website</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Cryptid Hunter Telegram Mini App -->
+            <article class="project-card">
+              <div class="project-header">
+                <div class="project-name">Cryptid Hunter Telegram Mini App</div>
+                <div class="project-tag">TON · Play-to-Earn</div>
+              </div>
+              <p class="project-desc">
+                Telegram Mini App built on TON with play-to-earn mechanics and
+                tokenization. Users interact through Telegram to perform game
+                actions, earn rewards and interact with on-chain assets via a
+                lightweight interface.
+              </p>
+              <div class="project-meta">
+                <div class="pill-row">
+                  <span class="pill">TON</span>
+                  <span class="pill">Telegram Mini App</span>
+                  <span class="pill">Play-to-earn</span>
+                </div>
+                <div class="project-link">
+                  <a
+                    href="https://t.me/cryptidHunterBot"
+                    target="_blank"
+                    rel="noreferrer"
+                    >@cryptidHunterBot</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Nixiee -->
+            <article class="project-card">
+              <div class="project-header">
+                <div class="project-name">Nixiee</div>
+                <div class="project-tag">Steem Delegation Bot</div>
+              </div>
+              <p class="project-desc">
+                Nixiee is a Steem-based bot that allows users to receive votes
+                with up to 20x the Steem Power they delegate. It provides
+                regular daily votes and lets users earn Steem even when they are
+                not actively writing. Worked on the web frontend, automation
+                logic and blockchain integration.
+              </p>
+              <div class="project-meta">
+                <div class="pill-row">
+                  <span class="pill">React</span>
+                  <span class="pill">Node.js</span>
+                  <span class="pill">steem.js</span>
+                  <span class="pill">Automation</span>
+                </div>
+                <div class="project-link">
+                  <a
+                    href="https://nixiee.blokfield.io/"
+                    target="_blank"
+                    rel="noreferrer"
+                    >nixiee.blokfield.io</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- RobiniaSwap Integrations -->
+            <article class="project-card">
+              <div class="project-header">
+                <div class="project-name">RobiniaSwap Integrations</div>
+                <div class="project-tag">DeFi · BSC</div>
+              </div>
+              <p class="project-desc">
+                Contributed to tools and integrations around RobiniaSwap, a
+                DeFi protocol on BSC that includes yield farming and AMM
+                features. Focused on web3 connections, interaction flows and
+                supporting frontend / service logic.
+              </p>
+              <div class="project-meta">
+                <div class="pill-row">
+                  <span class="pill">web3.js / ethers.js</span>
+                  <span class="pill">BSC</span>
+                  <span class="pill">DeFi</span>
+                </div>
+                <div class="project-link">
+                  <a
+                    href="https://robiniaswap.gitbook.io/robiniaswap"
+                    target="_blank"
+                    rel="noreferrer"
+                    >RobiniaSwap Docs</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Pollective -->
+            <article class="project-card">
+              <div class="project-header">
+                <div class="project-name">Pollective</div>
+                <div class="project-tag">Feedback Platform</div>
+              </div>
+              <p class="project-desc">
+                Research and feedback platform where users join studies and earn
+                rewards (Carrot / Polly). Worked on React-based UI, API
+                integrations and state management to support large-scale
+                participation and smooth flows for both participants and
+                researchers.
+              </p>
+              <div class="project-meta">
+                <div class="pill-row">
+                  <span class="pill">React</span>
+                  <span class="pill">SCSS</span>
+                  <span class="pill">Redux</span>
+                  <span class="pill">REST APIs</span>
+                </div>
+                <div class="project-link">
+                  <a
+                    href="https://pollective.com.tr/"
+                    target="_blank"
+                    rel="noreferrer"
+                    >pollective.com.tr</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <footer>
+            Open to remote Full-Stack / React roles · Last updated:
+            <span>2025</span>
+          </footer>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
